@@ -1,21 +1,38 @@
-MIT License
+Dictation – Lizenz für die kostenlose Nutzung
 
-Copyright (c) 2026 Christian Harter (SimFlightChris)
+Copyright © 2026 Christian Harter (SimFlightChris). Alle Rechte vorbehalten.
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+Dictation ist ein privates, nicht kommerzielles Projekt. Diese Lizenz gilt für
+Dictation selbst. Die mitgelieferten Fremdkomponenten und das Sprachmodell
+stehen unter ihren eigenen Lizenzen (siehe THIRD-PARTY-NOTICES.txt). Diese
+Lizenz schränkt die Rechte aus jenen Lizenzen nicht ein.
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+1. Nutzung
+   Du darfst Dictation kostenlos auf deinen eigenen Geräten installieren und
+   privat wie beruflich nutzen. Nach zehn Programmstarts ist eine kostenlose
+   Registrierung nötig. Dein Registrierungscode ist persönlich und gilt nur
+   für deine Installation.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+2. Weitergabe
+   Du darfst das unveränderte Setup kostenlos an andere weitergeben. Jede
+   Person registriert sich selbst.
+
+3. Nicht erlaubt
+   - Dictation zu verkaufen, zu vermieten oder gegen Entgelt weiterzugeben,
+   - Dictation zu verändern, zu dekompilieren oder die Registrierung zu
+     umgehen, soweit das Gesetz (insbesondere §§ 69d und 69e UrhG) es nicht
+     ausdrücklich erlaubt,
+   - Registrierungscodes an andere weiterzugeben.
+
+4. Gewährleistung und Haftung
+   Dictation wird kostenlos und ohne Zusage bestimmter Eigenschaften
+   überlassen. Ich hafte nur für Vorsatz und grobe Fahrlässigkeit sowie für
+   arglistig verschwiegene Mängel. Die Haftung nach dem Produkthaftungsgesetz
+   und für Schäden aus der Verletzung des Lebens, des Körpers oder der
+   Gesundheit bleibt unberührt.
+
+5. Recht
+   Es gilt deutsches Recht.
+
+Kontakt: simflightchris@gmail.com
+Webseite: https://thesimpilotcoder.github.io/dictation-releases/

@@ -1,6 +1,8 @@
 # Dictation
 
-Dictation wandelt gesprochene Sprache auf deinem Windows-PC in Text um. Die Spracherkennung mit Whisper läuft lokal.
+Dictation wandelt gesprochene Sprache auf deinem Windows-PC in Text um. Die Spracherkennung mit Whisper läuft lokal. Kostenlos und nicht kommerziell.
+
+**Webseite:** https://thesimpilotcoder.github.io/dictation-releases/
 
 [Aktuelles Windows-x64-Setup herunterladen](https://github.com/TheSimPilotCoder/dictation-releases/releases/latest). Unter **Assets** die Datei `Dictation-Setup-…-x64.exe` auswählen.
 
@@ -10,12 +12,12 @@ Dictation wandelt gesprochene Sprache auf deinem Windows-PC in Text um. Die Spra
 2. Setze den Cursor in das Textfeld, in das du diktieren möchtest.
 3. Halte **Strg + Windows** gedrückt und sprich. Lass die Tasten los, um die Aufnahme zu beenden und den Text erstellen zu lassen. Du findest das Diktat auch im Verlauf.
 
-## Freischaltung
+## Registrierung
 
-Die ersten zehn Programmstarts sind frei. Du kannst die Freischaltung jederzeit über **Freischalten** anfragen. Ab dem elften Start brauchst du einen Freischaltcode.
+Die ersten zehn Programmstarts sind frei, danach ist eine einmalige, kostenlose Registrierung nötig. Klicke in Dictation auf **Registrieren** und dann auf **Online registrieren**, oder nutze die [Registrierungsseite](https://thesimpilotcoder.github.io/dictation-releases/registrieren.html). Den Registrierungscode bekommst du per E-Mail und löst ihn innerhalb von 24 Stunden in Dictation ein.
 
-Dictation öffnet eine vorbereitete Nachricht an **simflightchris@gmail.com**. Sende sie mit der angezeigten Installationskennung ab. Den Code aus der Antwort fügst du innerhalb von 24 Stunden nach seiner Ausstellung in Dictation ein. Danach bleibt die App für diesen Windows-Benutzer auch offline und nach Updates freigeschaltet.
+## Entwickler, Lizenz und Datenschutz
 
-## Entwickler und Lizenz
+Entwickelt von Christian Harter (SimFlightChris). Dictation darf kostenlos genutzt und das unveränderte Setup kostenlos weitergegeben werden, Details in der [Lizenz](LICENSE). Fremdkomponenten und Sprachmodell haben eigene Lizenzen, die dem Setup beiliegen.
 
-Entwickelt von Christian Harter (SimFlightChris). Für den eigenen Dictation-Code gilt die [MIT-Lizenz](LICENSE). Fremdkomponenten und Sprachmodell haben eigene Lizenzbedingungen.
+[Datenschutz](https://thesimpilotcoder.github.io/dictation-releases/datenschutz.html) · [Impressum](https://thesimpilotcoder.github.io/dictation-releases/impressum.html)
