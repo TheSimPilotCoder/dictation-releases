@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title data-i18n="reg.title">Dictation registrieren</title>
+<link rel="icon" href="logo.svg" type="image/svg+xml">
+<link rel="stylesheet" href="style.css">
+<script src="config.js"></script>
+<script src="i18n.js"></script>
+</head>
+<body>
+<header class="site"><a href="./"><img src="logo.svg" alt=""><span class="brand">D I C T A T I O N</span></a></header>
+<main>
+  <h1 data-i18n="reg.title">Dictation registrieren</h1>
+  <p class="lead" data-i18n="reg.lead">Die Registrierung ist kostenlos. Sie sagt mir nur, wer Dictation nutzt.</p>
+
+  <div class="card">
+    <h3 data-i18n="reg.step1">1. Deine Installationskennung</h3>
+    <p id="known" hidden data-i18n="reg.known">Dictation hat deine Kennung mitgeschickt:</p>
+    <p id="unknown" data-i18n="reg.unknown">Öffne Dictation, klicke auf <strong>Registrieren</strong> und dann auf <strong>Online registrieren</strong>. Oder kopiere die Kennung dort und füge sie hier ein:</p>
+    <label for="id" class="small" data-i18n="reg.idLabel">Installationskennung</label>
+    <input id="id" class="id" style="width:100%;color:inherit" placeholder="DICT-…" autocomplete="off" spellcheck="false">
+    <p id="invalid" class="small" hidden data-i18n="reg.invalid">Die Kennung beginnt mit <code>DICT-</code> und hat danach 32 Zeichen.</p>
+
+    <h3 data-i18n="reg.step2">2. Anmeldeformular ausfüllen</h3>
+    <p data-i18n="reg.formText">Name, E-Mail-Adresse und Kennung genügen. Die Kennung ist schon eingetragen.</p>
+    <div class="actions">
+      <a id="form" class="button primary" aria-disabled="true" rel="noopener" data-i18n="reg.formButton">Zum Anmeldeformular</a>
+      <a id="mail" class="button" aria-disabled="true" data-i18n="reg.mailButton">Stattdessen per E-Mail</a>
+    </div>
+    <p class="small" data-i18n="reg.formNote">Das Formular liegt bei Google Forms. Was dabei mit deinen Angaben passiert, steht in der <a href="datenschutz.html#registrierung">Datenschutzerklärung</a>.</p>
+
+    <h3 data-i18n="reg.step3">3. Code einlösen</h3>
+    <p data-i18n="reg.code">Nach meiner Freigabe bekommst du deinen Registrierungscode per E-Mail. Füge ihn innerhalb von 24 Stunden in Dictation ein und klicke auf <strong>Code bestätigen</strong>.</p>
+  </div>
+</main>
+<footer>
+  <span>© 2026 Christian Harter (SimFlightChris)</span>
+  <a href="impressum.html" data-i18n="foot.imprint">Impressum</a>
+  <a href="datenschutz.html" data-i18n="foot.privacy">Datenschutz</a>
+</footer>
+<script>
+(() => {
+  const config = window.DICTATION, input = document.getElementById('id');
+  const form = document.getElementById('form'), mail = document.getElementById('mail');
+  const pattern = /^DICT-[0-9a-f]{32}$/;
+  // The app passes the identifier in the fragment, which browsers never send to the server.
+  const fromApp = decodeURIComponent(location.hash.slice(1)).trim();
+  if (pattern.test(fromApp)) {
+    input.value = fromApp;
+    document.getElementById('known').hidden = false;
+    document.getElementById('unknown').hidden = true;
+  }
+  function enable(link, href) {
+    if (href) { link.href = href; link.removeAttribute('aria-disabled'); }
+    else { link.removeAttribute('href'); link.setAttribute('aria-disabled', 'true'); }
+  }
+  function update() {
+    const id = input.value.trim(), ok = pattern.test(id);
+    document.getElementById('invalid').hidden = ok || id === '';
+    const formReady = config.formUrl && config.idField;
+    enable(form, ok && formReady ? config.formUrl + (config.formUrl.includes('?') ? '&' : '?') + 'usp=pp_url&' + config.idField + '=' + encodeURIComponent(id) : null);
+    form.hidden = !formReady;
+    const body = window.dictationText('reg.mailBody', 'Hallo Chris,\n\nbitte registriere Dictation für mich.\nInstallationskennung: {id}\n\nVielen Dank!')
+      .replace('{id}', id).replace(/\n/g, '\r\n');
+    // The subject stays German, so registrations from every language land in the same place.
+    enable(mail, ok ? 'mailto:' + config.email + '?subject=' + encodeURIComponent('Dictation registrieren') + '&body=' + encodeURIComponent(body) : null);
+    if (!formReady) mail.classList.add('primary');
+  }
+  input.addEventListener('input', update);
+  update();
+})();
+</script>
+</body>
+</html>
